@@ -21,6 +21,6 @@ cleanall:
 	rm -f $(SRCDIR)*.o
 	rm -f $(BINDIR)*
 install:
-    cp bin/$(NAME) /usr/bin/$(NAME)
+	cp bin/$(NAME) /usr/bin/$(NAME)
 uninstall:
-    rm /usr/bin/$(NAME)
+	rm /usr/bin/$(NAME)

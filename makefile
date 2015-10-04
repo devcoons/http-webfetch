@@ -20,3 +20,7 @@ clean:
 cleanall:
 	rm -f $(SRCDIR)*.o
 	rm -f $(BINDIR)*
+install:
+    cp bin/$(NAME) /usr/bin/$(NAME)
+uninstall:
+    rm /usr/bin/$(NAME)

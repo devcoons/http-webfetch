@@ -2,10 +2,19 @@
 
 This C Application is intended to provide an easy way to fetch a webpage.
 
+## Requirements
+
+https://gitlab.com/iikem/linux-lib-extend-c.git
+
 ## Installation
 
-Provide code examples and explanations of how to get the project.
+Before installation please check the requirements.
 
+```
+$ git clone https://gitlab.com/iikem/linux-app-webfetch.git
+$ make
+$ sudo make install
+```
 ## Usage
 
 Usage : -h(host) $ [-l(path) $] [-p(port) $] [-m(method) $] [-d(data) $] [-v(headerdata) '$=$,$=$..'] [-q(responsetype) $]

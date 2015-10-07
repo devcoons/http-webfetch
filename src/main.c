@@ -63,13 +63,13 @@
 			{print_usage(); exit(EXIT_FAILURE);}
 		
 		if(port == NULL)
-			{port = str_merge(port,"80",NULL);}
+			{port = str_merge(1,"80");}
 
 		if(path == NULL)
-			{path = str_merge(path,"/",NULL);}
+			{path = str_merge(1,"/");}
 		
 		if(method == NULL)
-			{method = str_merge(method,"GET",NULL);}
+			{method = str_merge(1,"GET");}
 
 		if(data == NULL)
 		{

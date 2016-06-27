@@ -1,5 +1,5 @@
 SRCDIR=src/
-BINDIR=bin/
+BINDIR=../Executable/
 DESTDIR=/$(BINDIR)  
 INSTALL_LOCATION=$(DESTDIR)usr/bin/
 CC=gcc

@@ -18,7 +18,7 @@
 								,header_parts[1],"\r\n");
 
 		message = str_merge(5,message,"Content-Type: application/json\r\nContent-Length: "
-							,num_tostr((int)strlen(data)),"\r\n\r\n"
+							,num_to_str((int)strlen(data)),"\r\n\r\n"
 							,data
 							);		
 

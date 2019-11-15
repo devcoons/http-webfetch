@@ -7,7 +7,7 @@
 
 	void print_usage()
 	{
-		printf("Usage : -h(host) $ [-l(path) $] [-p(port) $] [-m(method) $] [-d(data) $] [-v(headerdata) '$=$,$=$..'] [-q(responsetype) $]\n");
+		printf("Usage : -h(host) $ [-l(path) $] [-p(port) $] [-m(method) $] [-d(data) $] [-v(headerdata) '$:$;$:$..'] [-q(responsetype) $]\n");
 		exit(-1);
 	}
 

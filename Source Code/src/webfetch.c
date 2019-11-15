@@ -6,16 +6,26 @@
 		struct sockaddr_in serv_addr;
 		int sockfd, bytes, sent, received, total;
 		char * response = NULL,* message = NULL,* header = NULL,* body = NULL, **header_parts = NULL, buffer[1];
-		if(header_data != NULL)
-			if( strstr(header_data,"=") != NULL)
-				header_parts = str_split (header_data,'=');	
 		
 		message = str_merge(6,str_uppercase(method)," ",path," HTTP/1.0\r\nHost: ",host,"\r\n");
+		if(header_data != NULL)
+		{
+			char *hdata = header_data;
+			int count = 0;
+			while(1)
+			{
+				count++;
+				hdata = strchr(hdata,';');
+				if(hdata == NULL)
+					break;
+				hdata++;
+			}
+			header_parts = str_split (header_data,';');
+			for(int i=0;i<count;i++)
+			message = str_merge(3,message,header_parts[i],"\r\n");
+		}
 
-		if(header_parts!=NULL)
-			message = str_merge(5,message
-								,header_parts[0],": "
-								,header_parts[1],"\r\n");
+
 
 		message = str_merge(5,message,"Content-Type: application/json\r\nContent-Length: "
 							,num_to_str((int)strlen(data)),"\r\n\r\n"
